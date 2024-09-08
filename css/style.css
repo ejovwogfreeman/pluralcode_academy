@@ -1,0 +1,49 @@
+/* write your comment */
+
+/* css syntax */
+/* selector {
+    property: value;
+} */
+
+/* element/tag selector */
+
+body {
+  /* background-color: whitesmoke;
+  color: red;
+  font-family: sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px; */
+  /* font: italic 20px sans-serif; */
+}
+
+h1 {
+  color: blue;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* border: 10px dotted red; */
+  /* border-width: 10px;
+  border-style: dashed;
+  border-color: red; */
+  border: 1px solid red;
+  border-radius: 3px;
+  /* border-top: 10px solid red; */
+  /* border-bottom: 10px solid green; */
+  /* border-bottom-right-radius: 40px; */
+  padding: 20px; /*internal space*/
+  margin: 20px; /*external space*/
+}
+
+/* class selector */
+.section {
+  display: flex;
+}
+
+.nav-links {
+  display: flex;
+}
+
+/* id selectors */
+
+#active {
+  color: red;
+}
