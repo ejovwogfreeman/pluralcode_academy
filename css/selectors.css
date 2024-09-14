@@ -1,0 +1,296 @@
+/* selectors */
+
+/* universal selector */
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+/* element selector */
+h1 {
+  color: red;
+}
+
+li {
+  color: blue;
+}
+
+/* div {
+  background-color: red;
+  margin-bottom: 10px;
+} */
+
+/* class selector */
+.blue {
+  background-color: blue;
+}
+
+/* id selector */
+#pink {
+  background-color: pink;
+}
+
+#green {
+  background-color: green;
+  transition: 0.5s ease-in-out;
+  margin-bottom: 20px;
+}
+
+/* pseudo selectors */
+/* (pseudo class and pseudo elements) */
+
+/* #green:hover {
+  color: white;
+  font-size: 20px;
+} */
+
+/* div:hover {
+  background-color: red;
+} */
+
+.blue:hover {
+  background-color: blueviolet;
+}
+
+li {
+  background-color: rgb(214, 211, 211);
+  margin-bottom: 3px;
+  padding: 5px;
+}
+
+li:nth-child(even) {
+  background-color: rgb(169, 169, 169);
+}
+
+/* li:nth-of-type(1) {
+  background-color: rgb(169, 169, 169);
+} */
+
+a {
+  border: 1px solid black;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  border-radius: 3px;
+  /* transition: 0.5s ease-in-out; */
+}
+
+/* pseudo classes (uses a single colon) */
+
+a:hover {
+  background-color: black;
+  color: white;
+}
+
+a:active {
+  background-color: green;
+  border-color: green;
+}
+
+a:visited {
+  border-color: purple;
+  color: purple;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+/* pseudo elements (uses double colon) */
+
+section::first-letter {
+  font-size: 30px;
+}
+
+section::first-line {
+  background-color: yellow;
+}
+
+/* grouping or grouped selectors */
+
+a,
+button,
+span {
+  border: 1px solid black;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  border-radius: 3px;
+  background-color: transparent;
+  cursor: pointer;
+  /* transition: 0.5s ease-in-out; */
+}
+
+a:hover,
+button:hover,
+span:hover {
+  background-color: black;
+  color: white;
+}
+
+/* css combinators (4 major combinators) */
+/* 1) space
+2) >
+3) +
+4) ~ */
+
+/* css colors */
+
+/* 
+
+1) color names
+2) html 5 special color names
+3) hexadecimal color
+4) rgb color  (rgba - an extension of rgb)
+5) HSL (Hue Saturation and Ligtness)
+
+*/
+
+/* color names (red, green, blue, pink, purple etc */
+/* h1 {
+  color: pink;
+} */
+
+/* html 5 special color names (coral, tomato, crimson etc)*/
+/* h1 {
+  color: crimson;
+} */
+
+/* hexadecimal color values */
+
+/* #rrggbb (for six values)*/
+/* #rgb (for three values)*/
+
+/* must only contain 0-9 and A-F or a-f */
+
+/* h1 {
+  color: #000000;
+  color: #000;
+  color: #ffffff;
+  color: #fff;
+  color: #ff0000;
+  color: #00ff00;
+  color: #0000ff;
+  color: #8f8fc5;
+} */
+
+/* rgb color values */
+
+/* 0-255 (0-black and 255-white) */
+
+/* rgb(r, g, b) */
+
+/* h1 {
+  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  color: rgb(255, 0, 0);
+  color: rgb(0, 255, 0);
+  color: rgb(0, 0, 255);
+  color: rgb(175, 175, 225);
+} */
+
+h1 {
+  /* color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255);
+  color: rgba(255, 0, 0);
+  color: rgba(0, 255, 0);
+  color: rgba(0, 0, 255);
+  color: rgba(175, 175, 225, 0.2); */
+}
+
+/* h1 {
+  color: rgba(255, 0, 0, 0.7);
+}
+h1:hover {
+  color: rgba(255, 0, 0, 1);
+}
+
+li:hover {
+  background-color: rgba(214, 211, 211, 0.5);
+  margin-bottom: 3px;
+  padding: 5px;
+} */
+
+/* hsl color values (hue, saturation and lightness) */
+/* hue-> 0 - 360; */
+/* 0 or 360 -> red
+120 -> green
+240 -> blue */
+
+/* css units */
+
+/* px, rem, em, vh, vw, % */
+
+h1 {
+  /* font-size: 40px; */
+  /* font-size: 2em; */
+}
+
+p {
+  /* font-size: 3rem; */
+  /* font-size: 16px;
+  font-size: 32px; */
+}
+
+/* vh - view port height */
+h1 {
+  height: 50vh;
+  background-color: blue;
+}
+
+img {
+  height: 100vh;
+}
+
+/* vw - view port width */
+img {
+  width: 100vw;
+}
+
+.img-cont {
+  background-color: red;
+  text-align: right;
+  display: flex;
+  justify-content: right;
+}
+
+img {
+  display: block;
+  width: 50%;
+}
+
+/* css box model */
+.box {
+  /* background-color: blue; */
+  border: 1px solid black;
+  padding: 20px; /* internal space */
+  /* margin: 50px 10px 200px 40px; */
+  padding: 50px 10px 200px 40px;
+}
+
+/* margin and padding */
+/* single value (for top right botom and left)
+  two values (the first is for top and bottom, the second is for left and right)
+  three values (the first is for top, the second is for left and right while the third is for bottom)
+  four values (first for top, second for right, thrid for bottom and forth for left)
+  */
+
+.shadow {
+  background-color: white;
+  /* border-radius: 50%; */
+  width: 200px;
+  height: 200px;
+  /* box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.1) inset; */
+  border-radius: 3px;
+  box-shadow: 1px 1px 7px 2px rgba(0, 0, 0, 0.1);
+  transition: 0.5s ease-in-out;
+}
+
+.shadow:hover {
+  margin-top: -20px;
+}

@@ -1,0 +1,87 @@
+/* css layout */
+/* 
+
+1) float
+2) flex
+3) grid 
+
+*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  /* box-sizing: border-box; */
+}
+
+body {
+  padding: 20px 5%;
+  background-color: whitesmoke;
+}
+
+/* css float */
+/* .left {
+  float: left;
+  width: 70%;
+  padding: 20px;
+  border: 1px solid black;
+  margin-right: 10px;
+}
+
+.right {
+  float: right;
+  width: 30%;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+p {
+  clear: both;
+} */
+
+/* css flex box */
+/* .flex {
+  display: flex;
+}
+
+.left {
+  padding: 20px;
+  margin: 20px;
+  flex: 2;
+  border: 1px solid black;
+}
+
+.right {
+  padding: 20px;
+  margin: 20px;
+  flex: 1;
+  border: 1px solid black;
+} */
+
+/* css grid */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.grid div {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 7px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* .left {
+  border: 1px solid black;
+  padding: 20px;
+  margin: 20px;
+}
+.right {
+  border: 1px solid black;
+  padding: 20px;
+  margin: 20px;
+} */
+
+/* css postition */
