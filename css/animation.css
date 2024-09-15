@@ -1,0 +1,68 @@
+/* there are two ways of doing animation */
+/* 
+
+1) transitions
+2) animations (and keyframes)
+
+*/
+
+/* transition */
+/* h1 {
+  color: red;
+  transition: 1s ease-in-out;
+}
+
+h1:hover {
+  color: green;
+  background-color: red;
+  margin-left: 200px;
+} */
+
+@keyframes animate {
+  /* from {
+    color: red;
+  }
+  to {
+    color: green;
+  } */
+
+  /* 0% {
+    color: red;
+  }
+  20% {
+    color: green;
+  }
+  40% {
+    color: blue;
+  }
+  60% {
+    color: blueviolet;
+  }
+  80% {
+    color: brown;
+  }
+  100% {
+    color: red;
+  } */
+}
+
+h1 {
+  /* animation-name: animate;
+  animation-duration: 4s; */
+
+  /* animation: animate 10s infinite; */
+}
+
+h1 {
+  /* margin-left: 200px; */
+  animation: slideIn 5s infinite reverse;
+}
+
+@keyframes slideIn {
+  from {
+    margin-left: -200px;
+  }
+  to {
+    margin-left: 100%;
+  }
+}

@@ -1,0 +1,101 @@
+/* 
+
+there are 5 major positions
+1) static -> this is the defalut position of an element with which they come into the webpage
+2) relative -> the position of an element with respect to its original position
+3) absolute -> the position of an element with respect to its parent container
+4) fixed -> this is the position of an element with respect to the browser (the element remains on one spot/position no matter the scroll height)
+5) sticky -> combines the property of static and fixed (its static to some extent until the set height and then it becomes fixed)
+
+*/
+
+/* static */
+h1 {
+  position: static;
+  /* top, left, right and bottom property does not work */
+  /* left: 200px;
+  right: ;
+  top: ;
+  bottom: ;  */
+  color: red;
+}
+
+/* relative */
+/* the original space of the element is not lost */
+/* top, left, right and bottom property work */
+
+/* h1 {
+  position: relative;
+  left: 200px;
+  top: 300px;
+} */
+
+/* .box {
+  border: 1px solid black;
+  height: 300px;
+  position: relative;
+  margin-top: 200px;
+} */
+
+/* h1 {
+  position: relative;
+  top: 100px;
+} */
+
+/* absolute position */
+/* the space of the element is lost */
+
+h1 {
+  /* position: absolute; */
+  /* top: 300px; */
+  /* top: 0px; */
+  /* right: 0px; */
+}
+
+/* when a position is set to abolute, without its parent container set to relative, it will be relatively absolute to the browser */
+
+.box {
+  border: 1px solid black;
+  height: 300px;
+}
+
+/* fixed position, the space of the elment is lost */
+/* h1 {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+} */
+
+.icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #1877f2;
+  font-size: 30px;
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.1);
+  transition: 0.5s ease-in-out;
+}
+
+.icon:hover {
+  /* transform: translate(1.5); */
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+h2 {
+  position: sticky;
+  top: 0px;
+}
+
+img {
+  position: sticky;
+  top: 0px;
+}

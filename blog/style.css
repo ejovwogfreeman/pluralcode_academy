@@ -33,6 +33,22 @@ nav ul li {
   margin-left: 10px;
 }
 
+nav a {
+  color: #232057;
+  text-decoration: none;
+}
+
+nav li:nth-last-child(2) a {
+  background-color: #232057;
+  color: white;
+  padding: 5px;
+}
+nav li:last-child a {
+  background-color: #232057;
+  color: white;
+  padding: 5px;
+}
+
 section {
   display: flex;
 }
