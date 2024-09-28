@@ -76,6 +76,10 @@ body {
   color: var(--primary);
 }
 
+.bottom-nav .menu {
+  display: none;
+}
+
 header {
   background: linear-gradient(rgb(5, 47, 72, 0.5), rgb(5, 47, 72, 0.5)),
     url("header.jpg");
@@ -694,4 +698,191 @@ header div a {
   background-color: #052f48;
   color: var(--white);
   padding: 40px;
+}
+
+/* responsive designs */
+
+/* responsive design syntax */
+/* @media screen and (condition) {
+  selector {
+    property: value;
+  }
+} */
+
+@media screen and (max-width: 1000px) {
+  .top-nav,
+  .bottom-nav,
+  .section-1,
+  .section-2,
+  .section-3,
+  .section-5,
+  .section-6,
+  .section-7,
+  .section-8,
+  .section-9,
+  .top-footer {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .section-1 {
+    flex-direction: column-reverse;
+  }
+  .section-1 .right {
+    padding-left: 0px;
+    margin-bottom: 50px;
+  }
+
+  .section-6 .team,
+  .section-7 .cards,
+  .section-8 .blogs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .top-footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .top-footer .text {
+    margin-right: 0px;
+  }
+
+  .top-footer .text,
+  .top-footer ul {
+    flex: 50%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .top-nav {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .bottom-nav .right {
+    display: none;
+  }
+
+  .bottom-nav .menu {
+    display: block;
+    color: white;
+  }
+  .bottom-nav {
+    background-color: #052f48;
+  }
+
+  .section-4 .images {
+    display: block;
+  }
+
+  .section-4 .images .image-box {
+    display: block;
+  }
+
+  .section-5 {
+    padding: 150px 5%;
+  }
+
+  .section-5 .stats {
+    flex-wrap: wrap;
+  }
+
+  .section-5 .stats div {
+    flex: 50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .top-nav {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .top-nav .left {
+    flex-direction: column;
+  }
+
+  .bottom-nav,
+  .section-1,
+  .section-2,
+  .section-3,
+  .section-5,
+  .section-6,
+  .section-7,
+  .section-8,
+  .section-9,
+  .top-footer {
+    padding: 50px 10px;
+  }
+
+  .text-icons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .top-nav {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .section-1 .left div {
+    padding: 15px;
+  }
+
+  .section-6 .team,
+  .section-7 .cards,
+  .section-8 .blogs,
+  .text-icons,
+  .section-1 .left {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .section-2 .left {
+    display: none;
+  }
+
+  .section-5 {
+    height: 500px;
+  }
+
+  .section-5 .stats div {
+    flex: 100%;
+  }
+
+  .section-7 .cards .card {
+    margin-bottom: 30px;
+    padding: 15px;
+  }
+
+  .section-7 .card-profile {
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    padding-top: 10px;
+  }
+  .section-7 .card-profile .profile-text {
+    margin-left: 10px;
+  }
+
+  .section-9 .text {
+    display: block;
+    text-align: left;
+  }
+
+  .section-9 .text div {
+    margin-bottom: 20px;
+  }
+
+  .top-footer .text,
+  .top-footer ul {
+    flex: 100%;
+  }
+
+  .bottom-footer {
+    padding: 10px;
+    text-align: center;
+  }
 }
