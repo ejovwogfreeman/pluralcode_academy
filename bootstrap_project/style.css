@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Dancing+Script:wght@400..700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box !important;
+}
+
+:root {
+  --primary: #fea116;
+}
+
+header {
+  background: linear-gradient(rgba(15, 23, 43, 0.9), rgba(15, 23, 43, 0.9)),
+    url("img/bg-hero.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.text-cont {
+  margin-right: 100px;
+}
+
+.hero-image {
+  width: 100%;
+  animation: rotateImage 50s linear infinite;
+  margin-left: -50px;
+}
+
+@media screen and (max-width: 989px) {
+  .text-cont {
+    margin-right: 0px;
+  }
+
+  header {
+    height: 130vh;
+  }
+
+  .image-cont {
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .hero-image {
+    width: 90%;
+    animation: rotateImage 50s linear infinite;
+    margin: auto;
+  }
+}
+
+@keyframes rotateImage {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-warning {
+  background-color: var(--primary);
+  border: none;
+  border-radius: 0px;
+  color: white;
+  padding: 15px 40px;
+}
+
+.text-warning {
+  color: var(--primary) !important;
+}
+
+.btn-warning:hover {
+  color: white;
+  background-color: #f2a736;
+}
+
+.navbar-brand {
+  color: var(--primary) !important;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.active {
+  color: var(--primary) !important;
+}
+
+nav a:hover {
+  color: var(--primary) !important;
+}
+
+.custom-row div {
+  transition: 0.5s ease-in-out;
+}
+
+.custom-row div:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.custom-row div i {
+  color: var(--primary);
+  transition: 0.5s ease-in-out;
+}
+
+.custom-row div:hover i {
+  color: white;
+}
+
+.welcome-container div {
+  flex: 1;
+}
+
+.custom-text {
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.custom-text2 {
+  font-family: "Concert One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.about-us {
+  display: flex;
+  align-items: center;
+  color: var(--primary);
+}
+
+.line {
+  border-bottom: 3px solid var(--primary);
+  width: 50px;
+  margin-left: 10px;
+}
+
+.custom-border {
+  border-left: 5px solid var(--primary);
+}
