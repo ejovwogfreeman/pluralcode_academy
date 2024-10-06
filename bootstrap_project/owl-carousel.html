@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Owl Carousel Example</title>
+    <!-- OWL Carousel CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+      .carousel-container {
+        max-width: 80%;
+        margin: 50px auto;
+      }
+      .owl-item img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .owl-dots {
+        text-align: center;
+      }
+      .owl-dot span {
+        background-color: #ddd;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        border-radius: 50%;
+        margin: 5px;
+        transition: background-color 0.3s;
+      }
+      .owl-dot.active span {
+        background-color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel-container">
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img
+            src="https://via.placeholder.com/800x400/ff7f7f/333333?text=Slide+1"
+            alt="Slide 1"
+          />
+        </div>
+        <div class="item">
+          <img
+            src="https://via.placeholder.com/800x400/7f7fff/333333?text=Slide+2"
+            alt="Slide 2"
+          />
+        </div>
+        <div class="item">
+          <img
+            src="https://via.placeholder.com/800x400/7fff7f/333333?text=Slide+3"
+            alt="Slide 3"
+          />
+        </div>
+        <div class="item">
+          <img
+            src="https://via.placeholder.com/800x400/ffff7f/333333?text=Slide+4"
+            alt="Slide 4"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- OWL Carousel JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: true,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          autoplayHoverPause: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 2,
+            },
+            1000: {
+              items: 3,
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
