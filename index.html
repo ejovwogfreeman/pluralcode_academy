@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Continuous Partners Logo Slider</title>
+    <style>
+      /* Styling the body */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+      }
+
+      /* Logo slider container */
+      .logo-slider {
+        width: 100%;
+        overflow: hidden;
+        background-color: #f9f9f9;
+        padding: 20px 0;
+        box-sizing: border-box;
+      }
+
+      /* Logo track container with animation */
+      .logo-track {
+        display: flex;
+        width: max-content;
+        animation: scroll 15s linear infinite;
+      }
+
+      /* Individual logo styling */
+      .logo {
+        width: 200px;
+        flex-shrink: 0;
+        padding: 0 20px;
+      }
+
+      /* Logo image styling */
+      .logo img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      /* Keyframes for continuous scrolling */
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo-slider">
+      <div class="logo-track">
+        <!-- First set of logos -->
+        <div class="logo"><img src="img/image.png" alt="Partner 1" /></div>
+        <div class="logo"><img src="img/image.png" alt="Partner 2" /></div>
+        <div class="logo"><img src="img/image.png" alt="Partner 3" /></div>
+        <div class="logo"><img src="img/image.png" alt="Partner 4" /></div>
+        <div class="logo"><img src="img/image.png" alt="Partner 5" /></div>
+        <div class="logo"><img src="img/image.png" alt="Partner 6" /></div>
+
+        <!-- Duplicate set of logos for seamless effect -->
+        <div class="logo"><img src="img/image.png" alt="Partner 1" /></div>
+        <div class="logo"><img src="img/image.png" alt="Partner 2" /></div>
+        <div class="logo"><img src="img/image.png" alt="Partner 3" /></div>
+        <div class="logo"><img src="img/image.png" alt="Partner 4" /></div>
+        <div class="logo"><img src="img/image.png" alt="Partner 5" /></div>
+        <div class="logo"><img src="img/image.png" alt="Partner 6" /></div>
+      </div>
+    </div>
+  </body>
+</html>
