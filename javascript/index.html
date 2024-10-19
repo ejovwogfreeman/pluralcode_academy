@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Javscript Course</h1>
+    <!-- inline javscript -->
+    <button onclick="alert('Hello plural code')">click me</button>
+    <p onmoueover="alert('para')">click me to alert para</p>
+
+    <!-- <button onclick="sayHi()">new button</button> -->
+
+    <!-- using dom method -->
+    <button id="btn">new button</button>
+
+    <!-- internal javscript -->
+    <script>
+      //   alert("hello from internal js file");
+      //   console.log("hello");
+
+      //   function sayHi() {
+      //     alert("Hello world");
+      //   }
+
+      // using dom method
+      let btn = document.getElementById("btn");
+      btn.addEventListener("click", () => {
+        alert("Hello using dom method");
+      });
+
+      //   concatenation
+      let x = "5";
+      x = 12;
+      let y = 5;
+      console.log(x + y);
+    </script>
+
+    <!-- external javascript -->
+    <script src="script.js"></script>
+  </body>
+</html>
