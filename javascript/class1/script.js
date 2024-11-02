@@ -211,7 +211,7 @@
 // 2) objects
 
 // array
-let studentScore = [20, 45, 33, 98, 23];
+// let studentScore = [20, 45, 33, 98, 23];
 
 // console.log(studentScore[studentScore.length - 1]);
 
@@ -227,17 +227,17 @@ let studentScore = [20, 45, 33, 98, 23];
 
 // use objects
 // adivsable to use objects to hold multiple values of dirrent data types
-let person = {
-  name: "godbless",
-  isMarried: true,
-  age: 45,
-  email: "gb@gmail.com",
-  kids: null,
-  hobbies: ["coding", "robotics", "analytics", "ai"],
-  greet: function () {
-    return "Hello, my name is " + this.name;
-  },
-};
+// let person = {
+//   name: "godbless",
+//   isMarried: true,
+//   age: 45,
+//   email: "gb@gmail.com",
+//   kids: null,
+//   hobbies: ["coding", "robotics", "analytics", "ai"],
+//   greet: function () {
+//     return "Hello, my name is " + this.name;
+//   },
+// };
 
 // // accessing array elements (use indexing)
 // // first score
@@ -348,7 +348,7 @@ let person = {
 
 // console.log(varName);
 
-let x = 5;
+// let x = 5;
 
 // let z = x + 3; //correct for algebra and js
 
@@ -536,3 +536,297 @@ let x = 5;
 //     console.log(i);
 //   }
 // }
+
+// Looping through arrays
+
+// let myArr = ["Merlin", "Arthur", "Lancelot", "Gwaine", "Elion"];
+
+// learn to loop using for and while loop
+
+// myArr.push("Lyon", "Percieval");
+
+// console.log(myArr);
+
+// using the for loop
+// for (let i = 0; i < myArr.length; i++) {
+//   console.log(myArr[i]);
+// }
+
+// using the while loop
+
+// let i = 0;
+// while (i < myArr.length) {
+//   console.log(myArr[i]);
+//   i++;
+// }
+
+// // for of
+// for (let i of myArr) {
+//   console.log(i);
+// }
+
+// // for in
+// for (let i in myArr) {
+//   console.log(i);
+//   // console.log(myArr[i]);
+// }
+
+// major difference between for in and for of
+// for of (iterates a string)
+// for in (iterates an object)
+
+// let person = {
+//   name: "Godbless",
+//   isMarried: true,
+//   age: 45,
+//   email: "gb@gmail.com",
+//   kids: null,
+//   hobbies: ["coding", "robotics", "analytics", "ai"],
+//   greet: function () {
+//     return "Hello, my name is " + this.name;
+//   },
+// };
+
+// for (let i in person) {
+//   console.log(i + " - " + person[i]);
+// }
+
+// let firstName = "Godbless";
+
+// for (let i of firstName) {
+//   console.log(i);
+// }
+
+// foreach and map method
+
+// myArr.forEach((name, i) => {
+//   console.log(i + 1 + " - " + name);
+// });
+
+// myArr.map((name, i) => {
+//   console.log(name, i);
+// });
+
+// functions
+
+// regular and arrow functions
+
+// regular function syntax
+// function functionName(){
+//   // codeblock
+// }
+
+// function greet(name) {
+//   return "heyyy " + name;
+// }
+
+// const greetMe = greet("Lancelot");
+// const greetMe2 = greet();
+
+// console.log(greetMe);
+// console.log(greetMe2);
+
+// functions without paramenter
+// function greet() {
+//   return "Hello world";
+// }
+
+// const greeting = greet();
+
+// console.log(greeting);
+
+// function with parameter
+// function greet(username) {
+//   return "Welcome on board " + username;
+// }
+
+// const reg = greet("godbless");
+// console.log(reg);
+
+// // two params
+// function greet(name, time) {
+//   return "Hello " + name + " good " + time;
+// }
+
+// const greets = greet("godbless", "morining");
+// console.log(greets);
+
+// // default params value
+// function greet(name = "godbless", time = "morning") {
+//   return "Hello " + name + " good " + time;
+// }
+
+// const greets = greet("freeman", "evening");
+// console.log(greets);
+
+// arrow functions
+
+// function greet() {
+//   return "Hello world";
+// }
+
+// const greet = greet();
+
+// console.log(greet);
+
+// const greet = function () {
+//   return "Hello";
+// };
+
+// console.log(greet());
+
+// arrow functions
+// let greet = () => "Hello world";
+
+// arrow functions with params
+// let greet = name => "Hello " + name;
+
+// arrow functions with two params
+// let greet = (name, time) => "Hello " + name + " good " + time;
+
+// arrow functions  with default params
+// let greet = (name = "godbless", time = "morning") =>
+//   "Hello " + name + " good " + time;
+
+// let greetMe = greet("freeman", "evening");
+
+// console.log(greetMe);
+
+// create a function that returns the sum of numbers
+
+// function addNums(x, y) {
+//   return x + y;
+// }
+
+// const add = addNums(3, 5);
+
+// console.log(add);
+
+// write a function that takes a number and retunrs
+// all the even numbers between 0 and that number
+
+// function getEvenNums(num) {
+//   for (let i = 0; i < num; i++) {
+//     if (i % 2 == 0) {
+//       console.log(i);
+//     }
+//   }
+// }
+
+// getEvenNums(20);
+
+// function getEvenNums(num) {
+//   let even = [];
+//   for (let i = 0; i < num; i++) {
+//     if (i % 2 == 0) {
+//       even.push(i);
+//     }
+//   }
+//   return even;
+// }
+
+// const even = getEvenNums(20);
+
+// console.log(even);
+
+// write a fuction that converts dollar to naira
+// using conversion factor of 1dollar to 1600naira
+
+// Local Vs Global scope
+
+// local scoped variable
+// function greet(myName) {
+//   let time = "afternoon"; // local variable
+//   return "Hello " + myName + " good " + time;
+// }
+
+// console.log(myName);
+
+// global scoped variable
+
+// let time = "afternoon"; //global variable
+
+// function greet(myName) {
+//   return "Hello " + myName + " good " + time;
+// }
+
+// console.log(time);
+// console.log(greet("godbless"));
+
+// x = 23;
+
+// console.log(x);
+
+// var x;
+
+// let and const (block scoped)
+
+// function greet(myName) {
+//   var time = "afternoon"; // local variable
+//   return "Hello " + myName + " good " + time;
+// }
+
+// console.log(time);
+
+// function createGreeting(name) {
+//   return function () {
+//     console.log("Hello " + name + " good day!");
+//   };
+// }
+
+// // createGreeting("godbless")();
+
+// const greet = createGreeting("GB");
+
+// greet();
+
+// function outerFunc(outerVar) {
+//   return function innerFunc(innerVar) {
+//     console.log("outerVar " + outerVar);
+//     console.log("innerVar " + innerVar);
+//   };
+// }
+
+// const x = outerFunc("gb");
+// x("freeman");
+
+// recursive functions
+// call back functions
+
+// 1) convert naira to dollar
+// function convertNariaToDollar(naira) {
+//   let dollar = naira / 1600;
+//   return dollar;
+// }
+
+// console.log(convertNariaToDollar(5000));
+
+// 2) convert of kelvin to celcius
+
+// k = c + 273; //formula
+// c = k - 273; //formula
+
+// function kelvinToCelcius(kelvin) {
+//   let celcius = kelvin - 273;
+//   return celcius;
+// }
+
+// console.log(kelvinToCelcius(373));
+
+// ax^2 + bx + c = 0
+
+// x = -b + or - sqrt(b^2 - 4ac) / 2a
+
+function quad(a, b, c) {
+  let d = b ** 2 - 4 * a * c;
+  let sqrtd = d ** 0.5;
+  let solOneNumerator = -b + sqrtd;
+  let solTwoNumerator = -b - sqrtd;
+  let sol1 = solOneNumerator / (2 * a);
+  let sol2 = solTwoNumerator / (2 * a);
+  console.log(sol1 + "," + sol2);
+}
+
+// solve x^2 - 3x + 2;
+
+quad(1, -3, 2);
