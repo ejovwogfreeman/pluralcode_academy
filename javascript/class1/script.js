@@ -1410,4 +1410,219 @@
 // console.log(Math.max(3, 9, 78));
 // console.log(Math.min(3, 9, 78));
 
-console.log(Math.random());
+// console.log(Math.random());
+
+// js DOM
+
+// console.log(window);
+
+// window.alert("Hello world");
+
+// console.log(window.document.location.href);
+// console.log(window.document.URL);
+
+// DOM Selectors (they are grouped into two)
+// single element selectors
+// -> getElementById(), querySelector()
+// multiple element selectors
+// -> getElementsByClassName(), getElementsByTagName(), querySelectorAll()
+
+// -> getElementById()
+
+// let h1 = document.getElementById("h1");
+
+// h1.style.color = "red";
+// // h1.style.fontSize = "100px";
+// h1.style.fontFamily = "sans-serif";
+// h1.style.background = "green";
+// h1.style.backgroundColor = "blue";
+// // h1.innerText = "<span>Hello js plural code</span>";
+// // h1.textContent = "<span>Hello GB</span>";
+// // h1.innerHTML = "<h1>Hello with inner html</h1>";
+
+// querySelector() -> select the first of its kind;
+
+// let h1 = document.querySelector("h1");
+
+// let firstClass = document.querySelector(".myclass");
+
+// console.log(firstClass);
+
+// let hello = document.querySelector("#hello");
+
+// console.log(hello);
+
+// h1.style.background = "red";
+
+// console.log(h1);
+
+// -> getElementsByTagName(),
+
+// let h1Elements = document.getElementsByTagName("h1");
+
+// for (let i = 0; i < h1Elements.length; i++) {
+//   h1Elements[i].style.color = "red";
+// }
+
+// console.log(h1Elements);
+
+// -> getElementsByClassName()
+
+// let myClass = document.getElementsByClassName("myclass");
+
+// for (let i = 0; i < myClass.length; i++) {
+//   myClass[i].style.background = "yellow";
+// }
+
+// console.log(myClass);
+
+// querySelectorAll();
+
+// let headings = document.querySelectorAll("h1");
+
+// console.log(headings);
+
+// let myClass = document.querySelectorAll(".myclass");
+
+// console.log(myClass);
+
+// // old methods of dom selection
+// getElementById(), getElementsByClassName(), getElementsByTagName();
+// // new methods
+// querySelector(), querySelectorAll()
+
+// let h1 = document.getElementById("hello");
+
+// console.log(h1.getAttribute("id"));
+
+// h1.setAttribute("id", "hiii");
+
+// console.log(h1.getAttribute("id"));
+
+// let bulb = document.querySelector("img");
+
+// bulb.setAttribute("src", "pic_bulboff.gif");
+
+// console.log(bulb);
+
+// on and off bulb project
+
+// let bulb = document.querySelector("#bulb");
+
+// console.log(bulb.getAttribute("src"));
+
+// function onBulb() {
+//   bulb.setAttribute("src", "pic_bulbon.gif");
+// }
+
+// function offBulb() {
+//   bulb.setAttribute("src", "pic_bulboff.gif");
+// }
+
+// let firstHeading = document.querySelector(".myclass");
+
+// console.log(firstHeading);
+
+// // firstHeading.classList.add("newStyle");
+
+// // console.log(firstHeading.getAttribute("class"));
+
+// // firstHeading.classList.remove("myclass");
+// // console.log(firstHeading.getAttribute("class"));
+
+// firstHeading.addEventListener("click", () => {
+//   firstHeading.classList.toggle("newStyle");
+// });
+
+// let h1 = document.createElement("h1");
+
+// h1.textContent = "Hello JS";
+
+// // document.write("<h1>hello world</h1>");
+
+// let body = document.querySelector("body");
+
+// let p = document.createElement("p");
+// p.textContent = "Hello paragraph";
+
+// body.appendChild(h1);
+// body.appendChild(p);
+
+// body.removeChild(h1);
+
+// document.write("<h1>hello world</h1>");
+
+// // using a function
+// function darkMode() {
+//   document.querySelector("body").style.background = "black";
+// }
+
+// // using event listeners
+// document.getElementById("btn").addEventListener("click", () => {
+//   document.querySelector("body").style.background = "black";
+// });
+
+//1) crate a counter using js
+// plus, minus, increase by 5, decrease by 5, reset
+//2) temperature converter from celcius to kelvin
+
+// let div = document.querySelector(".hover");
+
+// div.addEventListener("mouseenter", () => {
+//   alert("hello world");
+// });
+
+// let btn = document.getElementById("btn");
+
+// btn.addEventListener("click", (e) => console.log(e));
+
+// let parent = document.querySelector(".parent");
+// let child = document.querySelector(".child");
+
+// parent.addEventListener("click", () => alert("Hello parent"));
+// child.addEventListener("click", (e) => {
+//   alert("Hello child");
+//   e.stopPropagation();
+// });
+
+// let id1 = document.getElementById("id1");
+
+// id1.addEventListener("click", () => alert(id1.textContent));
+
+// event delegation
+// let todoList = document.getElementById("todoList");
+// todoList.addEventListener("click", (e) => {
+//   if (e.target.tagName === "LI") {
+//     alert(e.target.textContent);
+//   }
+// });
+
+let btnGroup = document.querySelector(".btn-group");
+let counter = document.querySelector(".counter");
+let count = 0;
+
+btnGroup.addEventListener("click", (e) => {
+  if (e.target.tagName === "BUTTON") {
+    let action = e.target.getAttribute("data-action");
+    if (action === "decreaseBy5") {
+      count -= 5;
+      counter.textContent = count;
+    } else if (action === "decrease") {
+      count--;
+      counter.textContent = count;
+    } else if (action === "reset") {
+      counter = 0;
+      counter.textContent = count;
+    } else if (action === "increase") {
+      count++;
+      counter.textContent = count;
+    } else if (action === "increaseBy5") {
+      count += 5;
+      counter.textContent = count;
+    }
+  }
+});
+
+localStorage.setItem("task", "task 1 value");
+
+console.log(localStorage.getItem("task"));
